@@ -1,0 +1,8 @@
+{
+  "name": "chat-tag",
+  "displayName": "Chat Tag",
+  "author": "Atomic Laboratories",
+  "main": "chatTag.ChatTag",
+  "description": "Adds a tag to a players name in chat",
+  "version": 1.0
+}
