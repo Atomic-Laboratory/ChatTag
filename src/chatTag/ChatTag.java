@@ -17,12 +17,12 @@ public class ChatTag extends Plugin {
 
         Events.on(EventType.ServerLoadEvent.class, event -> {
             final var old = Vars.netServer.chatFormatter;
-            Vars.netServer.chatFormatter = (player, message) -> {
-                var other = old.format(player, message);
-                if (player == null) return other;
+            Vars.netServer.chatFormatter = (p, message) -> {
+                var other = old.format(p, message);
+                if (p == null) return other;
 
-                var tag = playerTags.get(player.uuid());
-                return (tag == null ? "" : tag) + other;
+                var tag = playerTags.get(p.uuid());
+                return "[lightgray][" + p.locale + "] [white]" + (tag == null ? "" : tag) + other;
             };
         });
     }
